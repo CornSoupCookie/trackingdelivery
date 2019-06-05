@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Tracking delivery</string>
+
+    <string name="title_delivery_feed">배송조회</string>
+    <string name="title_search_delivery">택배조회</string>
+    <string name="title_myhome">마이홈</string>
+
+    <string name="detail_basic_information">기본정보</string>
+    <string name="detail_status_information">상태정보</string>
+    <string name="detail_time">시간</string>
+
+    <string name="detail_company">택배</string>
+    <string name="detail_number">송장번호</string>
+    <string name="detail_sender">보내는 분</string>
+    <string name="detail_recipient">받는 분</string>
+    
+    <string name="recycling_action">상태</string>
+    <string name="recycling_message">배송 메세지</string>
+    <string name="recycling_time">시간</string>
+    <string name="recycling_location">위치</string>
+    <string name="recycling_status">상품상태</string>
+
+    <string name="cpwd_box_missage">로그인 화면으로 돌아갑니다.</string>
+    <string name="cpwd_box_cancel">확인</string>
+
+
+
+</resources>
