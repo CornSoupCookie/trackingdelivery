@@ -13,11 +13,6 @@ import com.example.trackingdelivery.View.Delivery.DeliveryDetail;
 
 public class MainActivity extends AppCompatActivity {
 
-    Intent intent;
-    String company = "kr.cjlogistics";
-    String invoiceNumber = "623106564786";
-
-
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -31,10 +26,6 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_search:
 
-                    intent = new Intent(MainActivity.this, DeliveryDetail.class);
-                    intent.putExtra("company", company);
-                    intent.putExtra("invoiceNumber", invoiceNumber);
-                    startActivity(intent);
 
                     return true;
                 case R.id.navigation_myhome:

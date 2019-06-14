@@ -23,6 +23,20 @@
     <string name="cpwd_box_missage">로그인 화면으로 돌아갑니다.</string>
     <string name="cpwd_box_cancel">확인</string>
 
+    <string name="kakao">카카오톡으로 로그인</string>
+    <string name="naver">네이버로 로그인</string>
+    <string name="facebook">페이스북으로 로그인</string>
+    <string name="email_login_weeding">이메일로 로그인</string>
+    <string name="email_sign_up">이메일로 가입하기</string>
+    <string name="auto_login">자동로그인</string>
+    <string name="action_sign_in">로그인</string>
+    <string name="password_reset">비밀번호 재설정</string>
+    <string name="password_hint">비밀번호</string>
+    <string name="email_hint">이메일</string>
+    <string name="error_field_required">이메일을 입력해주세요.</string>
+    <string name="error_invalid_email">이메일 형식을 지켜주세요.</string>
 
+
+    <string name="permission_rationale">"Contacts permissions are needed for providing email</string>
 
 </resources>
