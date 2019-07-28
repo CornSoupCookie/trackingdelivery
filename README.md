@@ -2,4 +2,4 @@
 trackingdelivery study
 
 # make with
-syntax: [gongul](https://github.com/gongul)
+backend server : [gongul](https://github.com/gongul)
