@@ -2,6 +2,4 @@
 trackingdelivery study
 
 # make with
-[gongul][id]
-[id]: URL "https://github.com/gongul"
-
+syntax: [gongul](https://github.com/gongul)
