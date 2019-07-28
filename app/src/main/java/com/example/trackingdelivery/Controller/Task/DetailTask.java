@@ -1,9 +1,12 @@
 package com.example.trackingdelivery.Controller.Task;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
 
 
 import com.example.trackingdelivery.Controller.Network.APIClient;
@@ -25,6 +28,8 @@ public class DetailTask extends AsyncTask<Void, Void, Void> {
 
     private String company;
     private String invoicNumber;
+    @SuppressLint("StaticFieldLeak")
+    private Context context;
     private RetrofitApiInterface retrofitApiInterface;
     private RecyclerView recyclerView;
     private LinearLayoutManager linearLayoutManager;
@@ -32,9 +37,10 @@ public class DetailTask extends AsyncTask<Void, Void, Void> {
     private ArrayList<DeliveryStructure> deliveryDetailList = new ArrayList();
 
 
-    public DetailTask(String company, String invoicNumber) {
+    public DetailTask(String company, String invoicNumber, Context context) {
         this.company = company;
         this.invoicNumber = invoicNumber;
+        this.context = context;
         retrofitApiInterface = APIClient.getClient().create(RetrofitApiInterface.class);
 
     }
@@ -54,10 +60,24 @@ public class DetailTask extends AsyncTask<Void, Void, Void> {
 
                     setCallbackData(resource);
                     setRecyclerAdapter();
-
-                } else {
-                    setRecyclerAdapter();
                 }
+                else {
+                // error case
+                switch (response.code()) {
+                    case 404:
+                        Toast.makeText(context, "not found", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 500:
+                        Toast.makeText(context, "server broken", Toast.LENGTH_SHORT).show();
+                        break;
+                    default:
+                        Toast.makeText(context, "unknown error", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+            }
+//                } else {
+//                    setRecyclerAdapter();
+//                }
             }
 
             @Override

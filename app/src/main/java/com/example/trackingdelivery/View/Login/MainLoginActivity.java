@@ -67,8 +67,8 @@ public class MainLoginActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     //이메일 회원가입
-                    intent = new Intent(MainLoginActivity.this, EmailSignUpActivity.class);
-                    startActivity(intent);
+                    /*intent = new Intent(MainLoginActivity.this, EmailSignUpActivity.class);
+                    startActivity(intent);*/
                 }
             });
 

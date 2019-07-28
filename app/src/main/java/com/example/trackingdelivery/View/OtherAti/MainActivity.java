@@ -10,10 +10,11 @@ import android.widget.TextView;
 
 import com.example.trackingdelivery.R;
 import com.example.trackingdelivery.View.Delivery.DeliveryDetail;
+import com.example.trackingdelivery.View.Delivery.DeliverySearch;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    Intent intent;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -25,10 +26,14 @@ public class MainActivity extends AppCompatActivity {
 
                     return true;
                 case R.id.navigation_search:
-
+                    intent = new Intent(MainActivity.this, DeliverySearch.class);
+                    startActivity(intent);
 
                     return true;
                 case R.id.navigation_myhome:
+
+                    /*intent = new Intent(MainActivity.this, Myhome.class);
+                    startActivity(intent);*/
 
                     return true;
             }

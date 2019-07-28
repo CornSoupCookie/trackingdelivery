@@ -8,6 +8,7 @@ import com.example.trackingdelivery.Controller.Network.RetrofitApiInterface;
 import com.example.trackingdelivery.Model.User.UserResource;
 import com.example.trackingdelivery.View.Login.MainLoginActivity;
 import com.example.trackingdelivery.View.OtherAti.MainActivity;
+import com.example.trackingdelivery.View.OtherAti.SplashActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -25,6 +26,7 @@ public class AutoLoginTask extends AsyncTask<Void, Void, Void> {
         this.mEmail = mEmail;
         this.mToken = mToken;
         this.context = context;
+
     }
 
     @Override
@@ -42,11 +44,13 @@ public class AutoLoginTask extends AsyncTask<Void, Void, Void> {
             @Override
             public void onResponse(Call<UserResource> call, Response<UserResource> response) {
 
+                //자동로그인 로직 성공
                 if (response.isSuccessful()) {
 
-                    userResource = response.body();
-                    Intent intent = new Intent(context, MainActivity.class);
-                    context.startActivity(intent);
+                        userResource = response.body();
+                        Intent intent = new Intent(context, MainActivity.class);
+                        context.startActivity(intent);
+
 
                 }
                 else {

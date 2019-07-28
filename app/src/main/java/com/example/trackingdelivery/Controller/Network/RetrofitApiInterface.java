@@ -1,5 +1,6 @@
 package com.example.trackingdelivery.Controller.Network;
 
+import com.example.trackingdelivery.Model.Delivery.DeliveryFeedResource;
 import com.example.trackingdelivery.Model.Delivery.DeliveryResource;
 import com.example.trackingdelivery.Model.User.UserResource;
 
@@ -48,11 +49,11 @@ public interface RetrofitApiInterface {
             @Header("X-Access-Token") String token);
 
 
-    /*@GET("users/{id}/carriers/{nk}/delivery")
+    @GET("users/{id}/carriers/{nk}/delivery")
     Call<DeliveryFeedResource> getUserDeliveryList(
 
             @Path("id") String userId,
-            @Path("nk") String nk);*/
+            @Path("nk") String nk);
 
 
     @FormUrlEncoded
@@ -73,6 +74,7 @@ public interface RetrofitApiInterface {
     @POST("users/reset-password")
     Call<ResponseBody> resetPassword(
             @Field("password") String mPassword);
+
 
 
 }

@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 
 import com.example.trackingdelivery.Controller.Task.AutoLoginTask;
@@ -17,6 +19,8 @@ public class SplashActivity extends AppCompatActivity {
 
     String token;
     String email;
+    View v;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,7 +38,9 @@ public class SplashActivity extends AppCompatActivity {
                 email = userPreferences.getEmail(context);
 
                 if (token ==null && email == null) {
-                    Intent intent = new Intent(SplashActivity.this, MainLoginActivity.class);
+
+
+                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                     startActivity(intent);
                     SplashActivity.this.finish();
 

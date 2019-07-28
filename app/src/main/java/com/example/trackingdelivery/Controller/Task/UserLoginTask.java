@@ -49,10 +49,7 @@ public class UserLoginTask extends AsyncTask<Void, Void, Void> {
                     if (response.isSuccessful()) {
 
 
-                        userPreferences.saveToken(LoginAtiContext, userResource.getId());
-                        userPreferences.saveEmail(LoginAtiContext, userResource.getUserId());
-                        Intent intent = new Intent(LoginAtiContext, MainActivity.class);
-                        LoginAtiContext.startActivity(intent);
+                        loginMain();
 
                     } else {
                         Toast.makeText(LoginAtiContext, "다시 로그인", Toast.LENGTH_SHORT).show();
@@ -76,5 +73,14 @@ public class UserLoginTask extends AsyncTask<Void, Void, Void> {
             }
         });
         return null;
+    }
+
+
+    private void loginMain(){
+
+        userPreferences.saveToken(LoginAtiContext, userResource.getId());
+        userPreferences.saveEmail(LoginAtiContext, userResource.getUserId());
+        Intent intent = new Intent(LoginAtiContext, MainActivity.class);
+        LoginAtiContext.startActivity(intent);
     }
 }

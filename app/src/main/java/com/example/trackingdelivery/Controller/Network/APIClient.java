@@ -17,14 +17,18 @@ public class APIClient {
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+        OkHttpClient client;
 
-        Retrofit builder = retrofit = new Retrofit.Builder()
-                .baseUrl(SeverUrl)
-                .addConverterFactory(GsonConverterFactory.create())
-                .client(client)
-                .build();
+            client= new OkHttpClient.Builder().addInterceptor(interceptor).build();
+            Retrofit builder = retrofit = new Retrofit.Builder()
+                    .baseUrl(SeverUrl)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .client(client)
+                    .build();
 
-        return retrofit;
+            return retrofit;
+
+
+
     }
 }

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".View.OtherAti.MainActivity"
+            android:name=".View.OtherAti.SplashActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +21,10 @@
 
         <activity android:name=".View.Delivery.DeliveryDetail"></activity>
         <activity android:name=".View.Delivery.DeliverySearch"></activity>
+        <activity android:name=".View.OtherAti.MainActivity"/>
+        <activity android:name=".View.Login.MainLoginActivity"/>
+        <activity android:name=".View.Login.ChangePasswordActivity"/>
+        <activity android:name=".View.Login.EmailLoginActivity"/>
     </application>
 
 </manifest>

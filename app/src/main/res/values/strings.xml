@@ -35,7 +35,11 @@
     <string name="email_hint">이메일</string>
     <string name="error_field_required">이메일을 입력해주세요.</string>
     <string name="error_invalid_email">이메일 형식을 지켜주세요.</string>
-
+    <string name="change_old_password">현재 비밀번호</string>
+    <string name="action_sign_in_short">로그인</string>
+    <string name="change_password_check">비밀번호 확인</string>
+    <string name="change_password_btn">변경하기</string>
+    <string name="change_password">설정할 비밀번호</string>
 
     <string name="permission_rationale">"Contacts permissions are needed for providing email</string>
 

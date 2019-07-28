@@ -1,5 +1,6 @@
 package com.example.trackingdelivery.View.Delivery;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -24,10 +25,10 @@ public class DeliveryDetail extends AppCompatActivity {
         {
             Intent intent = new Intent(this.getIntent());
             String company = intent.getStringExtra("company");
-
+            Context context = getApplicationContext();
             String invoicNumber = intent.getStringExtra("invoiceNumber");
 
-            new DetailTask(company, invoicNumber);
+            new DetailTask(company, invoicNumber, context);
 
 
         }
